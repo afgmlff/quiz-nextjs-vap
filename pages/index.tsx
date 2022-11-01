@@ -2,7 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { useState } from 'react'
+import {useForm} from 'react-hook-form'
+
 export default function Home() {
+
+  const {register, handleSubmit} = useForm()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,6 +17,40 @@ export default function Home() {
         <link rel="icon" href="/cropped-4-2.png" />
       </Head>
 
+      <main>
+        <div className={styles.centralizeCont}>
+        <h1>Teste de Nivelamento</h1>
+        <form>
+          <div className={styles.qContainer}>
+            <p className={styles.question}>Nome: </p>
+            <div className={styles.answer}>
+            <input type="text" name="nome"></input>
+            </div>
+            
+            <p className={styles.question}>E-mail: </p>
+            <div className={styles.answer}>
+            <input type="text" name="email"></input>
+            </div>
+
+            <p className={styles.question}>1. Eu _____ brasileiro.</p>
+            <div className={styles.answer}>
+              <input type="radio" defaultChecked={false} name="answer1"></input>
+              <label> a) estou</label>
+              <br/>
+              <input type="radio" defaultChecked={false} name="answer1"></input>
+              <label> a) sou</label>
+              <br/>
+              <input type="radio" defaultChecked={false} name="answer1"></input>
+              <label> a) tenho</label>
+              <br/>
+              <input type="radio" defaultChecked={false} name="answer1"></input>
+              <label> a) Não sei</label>
+              <br/>
+            </div>
+          </div>
+        </form>
+        </div>
+      </main>
 
       <footer className={styles.footer}>
         <a
