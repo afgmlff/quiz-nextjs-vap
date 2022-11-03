@@ -4,10 +4,15 @@ import styles from '../styles/Home.module.css'
 
 import { useState } from 'react'
 import {useForm} from 'react-hook-form'
+import { loadDefaultErrorComponents } from 'next/dist/server/load-components'
 
 export default function Home() {
 
-  const {register, handleSubmit} = useForm()
+  const {register, handleSubmit, reset, formState:{errors}} = useForm()
+
+  function verifSubmit(data: any){
+    console.log(data)
+  }
 
   return (
     <div className={styles.container}>
@@ -20,33 +25,38 @@ export default function Home() {
       <main>
         <div className={styles.centralizeCont}>
         <h1>Teste de Nivelamento</h1>
-        <form>
+        <form onSubmit={handleSubmit(verifSubmit)}>
           <div className={styles.qContainer}>
-            <p className={styles.question}>Nome: </p>
+            <p className={styles.question}><span className={styles.mandatory}>* </span>Nome: </p>
             <div className={styles.answer}>
-            <input type="text" name="nome"></input>
+              <input type="text" {...register('nome',{required: 'Digite seu nome'})}></input>
+              {errors.nome && <p className={styles.errorMsg}>Campo obrigatório</p>}
             </div>
             
-            <p className={styles.question}>E-mail: </p>
+            <p className={styles.question}><span className={styles.mandatory}>* </span>E-mail: </p>
             <div className={styles.answer}>
-            <input type="text" name="email"></input>
+            <input type="text" {...register('email',{required: 'Digite seu e-mail'})}></input>
+            {errors.email && <p className={styles.errorMsg}>Campo obrigatório</p>}
             </div>
 
             <p className={styles.question}>1. Eu _____ brasileiro.</p>
             <div className={styles.answer}>
-              <input type="radio" defaultChecked={false} name="answer1"></input>
+              <input type="radio" defaultChecked={false} name="answer1" value="a" ></input>
               <label> a) estou</label>
               <br/>
-              <input type="radio" defaultChecked={false} name="answer1"></input>
-              <label> a) sou</label>
+              <input type="radio" defaultChecked={false} name="answer1" value="b" ></input>
+              <label> b) sou</label>
               <br/>
-              <input type="radio" defaultChecked={false} name="answer1"></input>
-              <label> a) tenho</label>
+              <input type="radio" defaultChecked={false} name="answer1" value="c" ></input>
+              <label> c) tenho</label>
               <br/>
-              <input type="radio" defaultChecked={false} name="answer1"></input>
-              <label> a) Não sei</label>
+              <input type="radio" defaultChecked={false} name="answer1" value="d" ></input>
+              <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
+          <div className={styles.submitBut}>
+            <button>Enviar questionário</button>
           </div>
         </form>
         </div>

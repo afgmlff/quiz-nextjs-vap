@@ -151,3 +151,12 @@
 .answer{
   text-align: left;
 }
+
+.errorMsg{
+  color: red;
+  font-weight: bold;
+}
+
+.mandatory{
+  color: red;
+}
