@@ -12,7 +12,7 @@ export default function Home() {
 
   const {register, handleSubmit, reset, formState:{errors}} = useForm()
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
 
   let temp = new Array<any>
@@ -46,7 +46,7 @@ export default function Home() {
     //console.log(gabarito[0])
     checkScore()
 
-    navigate('/Resultado', {state: score})
+  //  navigate('/Resultado', {state: score})
   }
 
   return (
