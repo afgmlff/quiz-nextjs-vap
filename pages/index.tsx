@@ -10,8 +10,24 @@ export default function Home() {
 
   const {register, handleSubmit, reset, formState:{errors}} = useForm()
 
-  function verifSubmit(data: any){
+  const [answerValue, setAnswerValue] = useState(0)
+
+  let temp = new Array<any>
+
+  const onChange = (ev: any) => {
+    var id = (ev.target.id)
+    var idNum: number = +id
+    console.log(ev.target.value)
+    console.log(idNum)
+
+    temp[idNum] = ev.target.value
+  }
+
+  function verifSubmit(data: any){ //verifica nome e e-mail. pq não identifica radio?
     console.log(data)
+    console.log(temp[0])
+    console.log(temp[1])
+    console.log(temp[2])
   }
 
   return (
@@ -29,31 +45,69 @@ export default function Home() {
           <div className={styles.qContainer}>
             <p className={styles.question}><span className={styles.mandatory}>* </span>Nome: </p>
             <div className={styles.answer}>
-              <input type="text" {...register('nome',{required: 'Digite seu nome'})}></input>
-              {errors.nome && <p className={styles.errorMsg}>Campo obrigatório</p>}
+              {/* <input type="text" {...register('nome',{required: 'Digite seu nome'})}></input>   */} {/* required antigo, troquei por 'required' no input*/}
+              <input type="text" required {...register('nome',{required: ''})}></input>
+              {/*{errors.nome && <p className={styles.errorMsg}>Campo obrigatório</p>}*/} {/** error pro required antigo */}
             </div>
             
             <p className={styles.question}><span className={styles.mandatory}>* </span>E-mail: </p>
             <div className={styles.answer}>
-            <input type="text" {...register('email',{required: 'Digite seu e-mail'})}></input>
-            {errors.email && <p className={styles.errorMsg}>Campo obrigatório</p>}
+            <input type="text" required {...register('email',{required: ''})}></input>
             </div>
-
+            <br/>
+            <br/>
             <p className={styles.question}>1. Eu _____ brasileiro.</p>
             <div className={styles.answer}>
-              <input type="radio" defaultChecked={false} name="answer1" value="a" ></input>
+              <input type="radio" id="0" defaultChecked={false} required name="answer1" value="a" onChange={onChange}></input>
               <label> a) estou</label>
               <br/>
-              <input type="radio" defaultChecked={false} name="answer1" value="b" ></input>
+              <input type="radio" id="0" defaultChecked={false} required name="answer1" value="b" onChange={onChange}></input>
               <label> b) sou</label>
               <br/>
-              <input type="radio" defaultChecked={false} name="answer1" value="c" ></input>
+              <input type="radio" id="0" defaultChecked={false} required name="answer1" value="c" onChange={onChange}></input>
               <label> c) tenho</label>
               <br/>
-              <input type="radio" defaultChecked={false} name="answer1" value="d" ></input>
+              <input type="radio" id="0" defaultChecked={false} required name="answer1" value="d" onChange={onChange}></input>
               <label> d) Não sei</label>
               <br/>
             </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>2. Ele _____ 24 anos.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="1" defaultChecked={false} required name="answer2" value="a" onChange={onChange}></input>
+              <label> a) está</label>
+              <br/>
+              <input type="radio" id="1" defaultChecked={false} required name="answer2" value="b" onChange={onChange}></input>
+              <label> b) é</label>
+              <br/>
+              <input type="radio" id="1" defaultChecked={false} required name="answer2" value="c" onChange={onChange}></input>
+              <label> c) tem</label>
+              <br/>
+              <input type="radio" id="1" defaultChecked={false} required name="answer2" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>3. Nós _____ com fome.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="2" defaultChecked={false} required name="answer3" value="a" onChange={onChange}></input>
+              <label> a) estamos</label>
+              <br/>
+              <input type="radio" id="2" defaultChecked={false} required name="answer3" value="b" onChange={onChange}></input>
+              <label> b) somos</label>
+              <br/>
+              <input type="radio" id="2" defaultChecked={false} required name="answer3" value="c" onChange={onChange}></input>
+              <label> c) temos</label>
+              <br/>
+              <input type="radio" id="2" defaultChecked={false} required name="answer3" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+            
           </div>
           <div className={styles.submitBut}>
             <button>Enviar questionário</button>
@@ -77,3 +131,7 @@ export default function Home() {
     </div>
   )
 }
+function getElementsbyName(arg0: string) {
+  throw new Error('Function not implemented.')
+}
+
