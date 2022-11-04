@@ -6,15 +6,28 @@ import { useState } from 'react'
 import {useForm} from 'react-hook-form'
 import { loadDefaultErrorComponents } from 'next/dist/server/load-components'
 
+import { useNavigate } from "react-router-dom";
+
 export default function Home() {
 
   const {register, handleSubmit, reset, formState:{errors}} = useForm()
 
-  const [answerValue, setAnswerValue] = useState(0)
+  const navigate = useNavigate();
+
 
   let temp = new Array<any>
 
   const gabarito: any[] = ['b', 'c', 'a', 'c', 'c', 'c', 'b', 'a', 'a', 'a', 'c', 'c', 'b', 'a', 'b', 'b', 'c', 'a', 'a', 'b', 'a', 'b', 'd', 'b', 'b', 'c', 'a', 'c', 'a', 'a']
+
+  let score = 0
+
+  function checkScore(){
+    for(let i=0; i<30; i++){
+      if(temp[i] == gabarito[i])
+        score = score + 1
+    }
+    console.log("score: " + score)
+  }
 
   const onChange = (ev: any) => { //bind resposta especifica pra questao especifica. temp[0] = questao 1 + resposta da questao 1, etc...
     var id = (ev.target.id)
@@ -30,7 +43,10 @@ export default function Home() {
     for (var i=0; i<30; i++){
       console.log(temp[i])
     }
+    //console.log(gabarito[0])
+    checkScore()
 
+    navigate('/Resultado', {state: score})
   }
 
   return (
