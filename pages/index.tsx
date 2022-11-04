@@ -14,6 +14,8 @@ export default function Home() {
 
   let temp = new Array<any>
 
+  const gabarito: any[] = ['b', 'c', 'a', 'c', 'c', 'c', 'b', 'a', 'a', 'a', 'c', 'c', 'b', 'a', 'b', 'b', 'c', 'a', 'a', 'b', 'a', 'b', 'd', 'b', 'b', 'c', 'a', 'c', 'a', 'a']
+
   const onChange = (ev: any) => { //bind resposta especifica pra questao especifica. temp[0] = questao 1 + resposta da questao 1, etc...
     var id = (ev.target.id)
     var idNum: number = +id
@@ -25,9 +27,10 @@ export default function Home() {
 
   function verifSubmit(data: any){ //verifica nome e e-mail. pq não identifica radio?
     console.log(data)
-    console.log(temp[0])
-    console.log(temp[1])
-    console.log(temp[2])
+    for (var i=0; i<30; i++){
+      console.log(temp[i])
+    }
+
   }
 
   return (
