@@ -361,6 +361,242 @@ export default function Home() {
               <br/>
             </div>
 
+            <br/>
+            <br/>
+            <p className={styles.question}>18. Eu sou _____ que meu irmão.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="17" defaultChecked={false} required name="answer18" value="a" onChange={onChange}></input>
+              <label> a) maior</label>
+              <br/>
+              <input type="radio" id="17" defaultChecked={false} required name="answer18" value="b" onChange={onChange}></input>
+              <label> b) mais grande</label>
+              <br/>
+              <input type="radio" id="17" defaultChecked={false} required name="answer18" value="c" onChange={onChange}></input>
+              <label> c) mais maior</label>
+              <br/>
+              <input type="radio" id="17" defaultChecked={false} required name="answer18" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>19. _____ um mosquito dentro do quarto.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="18" defaultChecked={false} required name="answer19" value="a" onChange={onChange}></input>
+              <label> a) Tem</label>
+              <br/>
+              <input type="radio" id="18" defaultChecked={false} required name="answer19" value="b" onChange={onChange}></input>
+              <label> b) É</label>
+              <br/>
+              <input type="radio" id="18" defaultChecked={false} required name="answer19" value="c" onChange={onChange}></input>
+              <label> c) Está</label>
+              <br/>
+              <input type="radio" id="18" defaultChecked={false} required name="answer19" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>20. Ele me disse _____ que ele sabe.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="19" defaultChecked={false} required name="answer20" value="a" onChange={onChange}></input>
+              <label> a) todo</label>
+              <br/>
+              <input type="radio" id="19" defaultChecked={false} required name="answer20" value="b" onChange={onChange}></input>
+              <label> b) tudo</label>
+              <br/>
+              <input type="radio" id="19" defaultChecked={false} required name="answer20" value="c" onChange={onChange}></input>
+              <label> c) todos</label>
+              <br/>
+              <input type="radio" id="19" defaultChecked={false} required name="answer20" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>21. Ele comprou um sanduíche para _____.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="20" defaultChecked={false} required name="answer21" value="a" onChange={onChange}></input>
+              <label> a) mim</label>
+              <br/>
+              <input type="radio" id="20" defaultChecked={false} required name="answer21" value="b" onChange={onChange}></input>
+              <label> b) me</label>
+              <br/>
+              <input type="radio" id="20" defaultChecked={false} required name="answer21" value="c" onChange={onChange}></input>
+              <label> c) eu</label>
+              <br/>
+              <input type="radio" id="20" defaultChecked={false} required name="answer21" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>22. Eu _____ de uma água, por favor.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="21" defaultChecked={false} required name="answer22" value="a" onChange={onChange}></input>
+              <label> a) gostava</label>
+              <br/>
+              <input type="radio" id="21" defaultChecked={false} required name="answer22" value="b" onChange={onChange}></input>
+              <label> b) gostaria</label>
+              <br/>
+              <input type="radio" id="21" defaultChecked={false} required name="answer22" value="c" onChange={onChange}></input>
+              <label> c) gostei</label>
+              <br/>
+              <input type="radio" id="21" defaultChecked={false} required name="answer22" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>23. _____ você quer aprender português?</p>
+            <div className={styles.answer}>
+              <input type="radio" id="22" defaultChecked={false} required name="answer23" value="a" onChange={onChange}></input>
+              <label> a) Por que</label>
+              <br/>
+              <input type="radio" id="22" defaultChecked={false} required name="answer23" value="b" onChange={onChange}></input>
+              <label> b) Porque</label>
+              <br/>
+              <input type="radio" id="22" defaultChecked={false} required name="answer23" value="c" onChange={onChange}></input>
+              <label> c) Porquê</label>
+              <br/>
+              <input type="radio" id="22" defaultChecked={false} required name="answer23" value="d" onChange={onChange}></input>
+              <label> d) Por quê</label>
+              <br/>
+              <input type="radio" id="22" defaultChecked={false} required name="answer23" value="e" onChange={onChange}></input>
+              <label> e) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>24. Ele sairia de casa quando ______ de chover.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="23" defaultChecked={false} required name="answer24" value="a" onChange={onChange}></input>
+              <label> a) parou</label>
+              <br/>
+              <input type="radio" id="23" defaultChecked={false} required name="answer24" value="b" onChange={onChange}></input>
+              <label> b) parasse</label>
+              <br/>
+              <input type="radio" id="23" defaultChecked={false} required name="answer24" value="c" onChange={onChange}></input>
+              <label> c) parava</label>
+              <br/>
+              <input type="radio" id="23" defaultChecked={false} required name="answer24" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>25. Espero que você _____.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="24" defaultChecked={false} required name="answer25" value="a" onChange={onChange}></input>
+              <label> a) entendesse</label>
+              <br/>
+              <input type="radio" id="24" defaultChecked={false} required name="answer25" value="b" onChange={onChange}></input>
+              <label> b) entenda</label>
+              <br/>
+              <input type="radio" id="24" defaultChecked={false} required name="answer25" value="c" onChange={onChange}></input>
+              <label> c) entender</label>
+              <br/>
+              <input type="radio" id="24" defaultChecked={false} required name="answer25" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>26. Se eu _____ uma festa, eu te convido.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="25" defaultChecked={false} required name="answer26" value="a" onChange={onChange}></input>
+              <label> a) fazer</label>
+              <br/>
+              <input type="radio" id="25" defaultChecked={false} required name="answer26" value="b" onChange={onChange}></input>
+              <label> b) faço</label>
+              <br/>
+              <input type="radio" id="25" defaultChecked={false} required name="answer26" value="c" onChange={onChange}></input>
+              <label> c) fizer</label>
+              <br/>
+              <input type="radio" id="25" defaultChecked={false} required name="answer26" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>27. Eu _____ muito ultimamente.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="26" defaultChecked={false} required name="answer27" value="a" onChange={onChange}></input>
+              <label> a) tenho lido</label>
+              <br/>
+              <input type="radio" id="26" defaultChecked={false} required name="answer27" value="b" onChange={onChange}></input>
+              <label> b) tinha lido</label>
+              <br/>
+              <input type="radio" id="26" defaultChecked={false} required name="answer27" value="c" onChange={onChange}></input>
+              <label> c) ter lido</label>
+              <br/>
+              <input type="radio" id="26" defaultChecked={false} required name="answer27" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>28. Eu já _____ quando ele chegou.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="27" defaultChecked={false} required name="answer28" value="a" onChange={onChange}></input>
+              <label> a) tenho comido</label>
+              <br/>
+              <input type="radio" id="27" defaultChecked={false} required name="answer28" value="b" onChange={onChange}></input>
+              <label> b) comi</label>
+              <br/>
+              <input type="radio" id="27" defaultChecked={false} required name="answer28" value="c" onChange={onChange}></input>
+              <label> c) tinha comido</label>
+              <br/>
+              <input type="radio" id="27" defaultChecked={false} required name="answer28" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>29. _____ alto ____ frio.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="28" defaultChecked={false} required name="answer29" value="a" onChange={onChange}></input>
+              <label> a) Quanto mais / mais</label>
+              <br/>
+              <input type="radio" id="28" defaultChecked={false} required name="answer29" value="b" onChange={onChange}></input>
+              <label> b) O mais / mais</label>
+              <br/>
+              <input type="radio" id="28" defaultChecked={false} required name="answer29" value="c" onChange={onChange}></input>
+              <label> c) O mais / o mais comido</label>
+              <br/>
+              <input type="radio" id="28" defaultChecked={false} required name="answer29" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
+
+            <br/>
+            <br/>
+            <p className={styles.question}>30. Eu moro em São Paulo _____ 10 anos.</p>
+            <div className={styles.answer}>
+              <input type="radio" id="29" defaultChecked={false} required name="answer30" value="a" onChange={onChange}></input>
+              <label> a) faz</label>
+              <br/>
+              <input type="radio" id="29" defaultChecked={false} required name="answer30" value="b" onChange={onChange}></input>
+              <label> b) fazem</label>
+              <br/>
+              <input type="radio" id="29" defaultChecked={false} required name="answer30" value="c" onChange={onChange}></input>
+              <label> c) desde</label>
+              <br/>
+              <input type="radio" id="29" defaultChecked={false} required name="answer30" value="d" onChange={onChange}></input>
+              <label> d) Não sei</label>
+              <br/>
+            </div>
 
           </div>
           <div className={styles.submitBut}>
