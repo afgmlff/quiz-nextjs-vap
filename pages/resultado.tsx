@@ -17,6 +17,7 @@ function Resultado(){
     let score = []
 
     let scoreFinal = ''
+    let nivelFinal = ''
 
     function split (){
 
@@ -28,11 +29,14 @@ function Resultado(){
         if(typeof(nivel) == 'string'){
             score = nivel.split("-")
             scoreFinal = score[1]
+            nivelFinal = score[0]
             console.log("score: ", score[1])
         }
-
+        console.log(nivelFinal)
         console.log(scoreFinal)
+
     }
+    
     split()
 
 
@@ -48,7 +52,86 @@ function Resultado(){
                 <div className={styles.centralizeCont}>
                     <h1>Resultado: {scoreFinal}/30</h1>
                 </div>
+                <div id = "A1" className={styles.resultContainer}>
+                    Seu nível é A1: Básico <br/><br/>
+
+                    – Consegue entender e usar expressões familiares do dia-a-dia e frases bem básicas, visando satisfazer necessidades concretas.<br/><br/>
+
+                    – Consegue apresentar-se, assim como apresentar os outros, fazer e responder perguntas sobre detalhes pessoais como: onde mora, pessoas que conhece e coisas que possui.<br/><br/>
+
+                    – Consegue interagir de forma simples, se a outra pessoa falar lenta e claramente e com paciência para ajudar.<br/><br/>
+                 </div>
+
+                 <div id = "A2" className={styles.resultContainer}>
+                    Seu nível é A2: Intermediário Baixo <br/><br/>
+
+                    – Consegue entender sentenças e expressões frequentes relacionadas a áreas de relevância imediata (por exemplo, informações pessoais e familiares básicas, compras, localidades geográficas, emprego, etc.).<br/><br/>
+
+                    – Consegue se comunicar em tarefas simples e em rotinas que exigem apenas uma troca de informação simples e direta sobre assuntos que lhe são familiares e habituais.<br/><br/>
+
+                    – Consegue descrever em termos simples aspectos do meio ao seu redor e se referir a assuntos relacionados com necessidades imediatas.<br/><br/>
+                 </div>
+                
+                 <div id = "B1" className={styles.resultContainer}>
+                    Seu nível é B1: Intermediário Alto  <br/><br/>
+
+                    – Consegue entender os pontos principais, quando em contato com linguagem usual e familiar (no ambiente de trabalho, escola, lazer, etc.).<br/><br/>
+
+                    – Consegue lidar com a maioria das situações que possivelmente podem ocorrer em viagens onde a língua é falada.<br/><br/>
+
+                    – Consegue produzir um discurso simples e coerente sobre assuntos que lhe são familiares ou de interesse pessoal.<br/><br/>
+
+                    – Consegue descrever experiências e eventos, sonhos, esperanças e ambições, e dar breves razões e explicações de suas opiniões e planos.<br/><br/>
+                 </div>
+
+                 <div id = "B2" className={styles.resultContainer}>
+                    Seu nível é B2: Avançado <br/><br/>
+
+                    – Consegue entender as ideias principais de textos complexos em tópicos concretos e abstratos, incluindo discussões técnicas em sua área de especialização.<br/><br/>
+
+                    – Consegue interagir com um grau de fluência e espontaneidade de modo que conversas com falantes nativos ocorra sem esforço por nenhuma das partes.<br/><br/>
+
+                    – Consegue produzir textos claros e detalhados em temas diversos e explicar um ponto de vista em um assunto, expondo as vantagens e desvantagens de várias opções.<br/><br/>
+                 </div>
+
+                 <div id = "C1" className={styles.resultContainer}>
+                    Seu nível é C1: Fluente  <br/><br/>
+
+                    – Consegue entender um vasto número de textos longos e complexos, sendo capaz de reconhecer significados implícitos.<br/><br/>
+
+                    – Consegue se expressar fluente e espontaneamente sem se esforçar para encontrar palavras adequadas.<br/><br/>
+
+                    – Consegue usar a língua com flexibilidade e eficazmente para propósitos sociais, acadêmicos e profissionais.<br/><br/>
+
+                    – Consegue produzir textos complexos, claros e bem estruturados, demonstrando um domínio de mecanismos de organização, de articulação e de coesão do discurso.<br/><br/>
+                 </div>
+
+                 <div id = "C2" className={styles.resultContainer}>
+                    Seu nível é C2: Nativo  <br/><br/>
+
+                    – Consegue entender com facilidade tudo que ouve e lê.<br/><br/>
+
+                    – Consegue resumir informações de diferentes fontes faladas e escritas, reconstruindo argumentos e fatos em uma apresentação coerente.<br/><br/>
+
+                    – Consegue se expressar com espontaneidade, fluidez e precisão.<br/><br/>
+
+                    – Consegue distinguir finas variações de significados, inclusive nas situações mais complexas.<br/><br/>
+                 </div>
+
             </main>
+            <footer className={styles.footer}>
+        <a
+          href="https://github.com/afgmlff"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <span className={styles.logo}>
+            <Image src="/me.jpg" width={16} height={16} className={styles.roundedImg} alt={''} />
+          </span>
+        </a>
+      </footer>
+
         </div>
     )
     
