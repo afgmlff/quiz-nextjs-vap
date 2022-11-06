@@ -36,9 +36,46 @@ function Resultado(){
         console.log(scoreFinal)
 
     }
+
+    function showDivResult(){// percebe qual div deveremos exibir de acordo com o resultado do usuário 
+        var numbScoreFinal: number = +scoreFinal
+        //console.log(numbScoreFinal)
+        var elemID
+
+        if(numbScoreFinal == 30){
+            elemID = document.getElementById('C2')
+            if(elemID)
+                elemID.style.display = "block"
+          }
+          else if (numbScoreFinal > 24){
+            elemID = document.getElementById('C1')
+            if(elemID)
+                elemID.style.display = "block"
+          }
+          else if (numbScoreFinal > 18){
+            elemID = document.getElementById('B2')
+            if(elemID)
+                elemID.style.display = "block"
+          }
+          else if (numbScoreFinal > 12){
+            elemID = document.getElementById('B1')
+            if(elemID)
+                elemID.style.display = "block"
+          }
+          else if (numbScoreFinal > 6){
+            elemID = document.getElementById('A2')
+            if(elemID)
+                elemID.style.display = "block"
+          }
+          else{
+            elemID = document.getElementById('A1')
+            if(elemID)
+                elemID.style.display = "block"
+          }
+    }
     
     split()
-
+    showDivResult()
 
     return (
         <div className={styles.container}>
