@@ -64,7 +64,7 @@ export default function Home() {
     
   }
 
-  function verifSubmit(data: any){
+  async function verifSubmit (data: any){
     console.log(data)
     for (var i=0; i<30; i++){
       console.log(temp[i])
@@ -73,11 +73,20 @@ export default function Home() {
     checkScore()
     //router.push('/resultado')
 
-    fetch("/api/planilha", {
+
+    const response = await fetch('/api/planilha', {
       method: 'POST',
-      body: JSON.stringify({dados: data, respostas: temp, nota: score, nivel: nivel})
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
     })
 
+    const content = await response.json();
+
+    console.log((content.data.tableRange))
+    
     router.push({
       pathname: '/resultado',
       query: { nivel: nivel.concat('-', score.toString()) }
