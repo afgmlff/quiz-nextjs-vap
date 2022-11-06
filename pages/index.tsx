@@ -72,6 +72,12 @@ export default function Home() {
     //console.log(gabarito[0])
     checkScore()
     //router.push('/resultado')
+
+    fetch("/api/planilha", {
+      method: 'POST',
+      body: JSON.stringify({dados: data, respostas: temp, nota: score, nivel: nivel})
+    })
+
     router.push({
       pathname: '/resultado',
       query: { nivel: nivel.concat('-', score.toString()) }

@@ -77,9 +77,9 @@ function Resultado(){
                     if(elemID)
                         elemID.style.display = "block"
                 }
-                else if (numbScoreFinal == 0){
+                else if (numbScoreFinal < 7){
                     elemID = document.getElementById('A1')
-                    if(elemID && numbScoreFinal == 0)
+                    if(elemID)
                         elemID.style.display = "block"
                 }
             }
