@@ -7,26 +7,48 @@ import {useForm} from 'react-hook-form'
 import { loadDefaultErrorComponents } from 'next/dist/server/load-components'
 
 import { useNavigate } from "react-router-dom";
+import { Router, useRouter } from 'next/router'
 
 export default function Home() {
 
   const {register, handleSubmit, reset, formState:{errors}} = useForm()
 
   //const navigate = useNavigate();
+  const router = useRouter()
 
+  let nivel = ''
 
   let temp = new Array<any>
 
   const gabarito: any[] = ['b', 'c', 'a', 'c', 'c', 'c', 'b', 'a', 'a', 'a', 'c', 'c', 'b', 'a', 'b', 'b', 'c', 'a', 'a', 'b', 'a', 'b', 'd', 'b', 'b', 'c', 'a', 'c', 'a', 'a']
 
   let score = 0
-
+  
   function checkScore(){
     for(let i=0; i<30; i++){
       if(temp[i] == gabarito[i])
         score = score + 1
     }
     console.log("score: " + score)
+
+    if(score == 30){
+      nivel = 'C2'
+    }
+    else if (score > 24){
+      nivel = 'C1'
+    }
+    else if (score > 18){
+      nivel = 'B2'
+    }
+    else if (score > 12){
+      nivel = 'B1'
+    }
+    else if (score > 6){
+      nivel = 'A2'
+    }
+    else{
+      nivel = 'A1'
+    }
   }
 
   const onChange = (ev: any) => { //bind resposta especifica pra questao especifica. temp[0] = questao 1 + resposta da questao 1, etc...
@@ -36,16 +58,21 @@ export default function Home() {
     console.log(idNum)
 
     temp[idNum] = ev.target.value
+    
   }
 
-  function verifSubmit(data: any){ //verifica nome e e-mail. pq não identifica radio?
+  function verifSubmit(data: any){
     console.log(data)
     for (var i=0; i<30; i++){
       console.log(temp[i])
     }
     //console.log(gabarito[0])
     checkScore()
-
+    //router.push('/resultado')
+    router.push({
+      pathname: '/resultado',
+      query: { place: 'City' }
+    });
   //  navigate('/Resultado', {state: score})
   }
 
