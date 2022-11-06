@@ -1,17 +1,19 @@
-import React from "react"
+import React, {useEffect} from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css';
 
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 import Home from './index'
 import { stringify } from "querystring";
 
 function Resultado(){
 
+    
     const router = useRouter()
-    console.log(router.query)
+//    console.log(router.query)
 
     let query = stringify(router.query)
     let score = []
@@ -22,60 +24,73 @@ function Resultado(){
     function split (){
 
         let params = query.split("=", 2)
-        console.log(params[1])
+//        console.log(params[1])
 
         let nivel = params[1]
-        console.log("nivel: ", nivel, typeof(nivel))
+ //       console.log("nivel: ", nivel, typeof(nivel))
         if(typeof(nivel) == 'string'){
             score = nivel.split("-")
             scoreFinal = score[1]
             nivelFinal = score[0]
-            console.log("score: ", score[1])
+ //           console.log("score: ", score[1])
         }
-        console.log(nivelFinal)
-        console.log(scoreFinal)
+  //      console.log(nivelFinal)
+        console.log("scorefinal: " + scoreFinal)
 
     }
 
-    function showDivResult(){// percebe qual div deveremos exibir de acordo com o resultado do usuário 
-        var numbScoreFinal: number = +scoreFinal
+    function showDivResult(){// percebe qual div deveremos exibir de acordo com o resultado do usuário  
+
         //console.log(numbScoreFinal)
         var elemID
-
-        if(numbScoreFinal == 30){
-            elemID = document.getElementById('C2')
-            if(elemID)
-                elemID.style.display = "block"
-          }
-          else if (numbScoreFinal > 24){
-            elemID = document.getElementById('C1')
-            if(elemID)
-                elemID.style.display = "block"
-          }
-          else if (numbScoreFinal > 18){
-            elemID = document.getElementById('B2')
-            if(elemID)
-                elemID.style.display = "block"
-          }
-          else if (numbScoreFinal > 12){
-            elemID = document.getElementById('B1')
-            if(elemID)
-                elemID.style.display = "block"
-          }
-          else if (numbScoreFinal > 6){
-            elemID = document.getElementById('A2')
-            if(elemID)
-                elemID.style.display = "block"
-          }
-          else{
-            elemID = document.getElementById('A1')
-            if(elemID)
-                elemID.style.display = "block"
-          }
-    }
+        useEffect(() => {
+            if (typeof window !== "undefined") {
+                if(scoreFinal)
+                    var numbScoreFinal: number = +scoreFinal
+                else
+                    var numbScoreFinal = 99
     
+                console.log("numbscore: " + numbScoreFinal)
+            
+                if(numbScoreFinal == 30){
+                    elemID = document.getElementById('C2')
+                    if(elemID)
+                        elemID.style.display = "block"
+                }
+                else if (numbScoreFinal > 24 && numbScoreFinal < 30){
+                    elemID = document.getElementById('C1')
+                    if(elemID)
+                        elemID.style.display = "block"
+                }
+                else if (numbScoreFinal > 18 && numbScoreFinal < 25){
+                    elemID = document.getElementById('B2')
+                    if(elemID)
+                        elemID.style.display = "block"
+                }
+                else if (numbScoreFinal > 12 && numbScoreFinal < 19){
+                    elemID = document.getElementById('B1')
+                    if(elemID)
+                        elemID.style.display = "block"
+                }
+                else if (numbScoreFinal > 6 && numbScoreFinal < 13){
+                    elemID = document.getElementById('A2')
+                    if(elemID)
+                        elemID.style.display = "block"
+                }
+                else if (numbScoreFinal == 0){
+                    elemID = document.getElementById('A1')
+                    if(elemID && numbScoreFinal == 0)
+                        elemID.style.display = "block"
+                }
+            }
+        })
+        
+    }
+
+
     split()
     showDivResult()
+
 
     return (
         <div className={styles.container}>
@@ -89,7 +104,7 @@ function Resultado(){
                 <div className={styles.centralizeCont}>
                     <h1>Resultado: {scoreFinal}/30</h1>
                 </div>
-                <div id = "A1" className={styles.resultContainer}>
+                 <div id = "A1" className={styles.resultContainer}>
                     Seu nível é A1: Básico <br/><br/>
 
                     – Consegue entender e usar expressões familiares do dia-a-dia e frases bem básicas, visando satisfazer necessidades concretas.<br/><br/>

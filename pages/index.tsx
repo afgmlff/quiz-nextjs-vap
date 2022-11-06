@@ -69,14 +69,14 @@ export default function Home() {
     for (var i=0; i<30; i++){
       console.log(temp[i])
     }
- 
+    //console.log(gabarito[0])
     checkScore()
-
+    //router.push('/resultado')
     router.push({
       pathname: '/resultado',
       query: { nivel: nivel.concat('-', score.toString()) }
-    }, '/resultado');  //hide query params from user
-
+    }, );
+  //  navigate('/Resultado', {state: score})
   }
 
   return (
