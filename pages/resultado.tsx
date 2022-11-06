@@ -3,9 +3,39 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css';
 
+import { useRouter } from 'next/router'
+
 import Home from './index'
+import { stringify } from "querystring";
 
 function Resultado(){
+
+    const router = useRouter()
+    console.log(router.query)
+
+    let query = stringify(router.query)
+    let score = []
+
+    let scoreFinal = ''
+
+    function split (){
+
+        let params = query.split("=", 2)
+        console.log(params[1])
+
+        let nivel = params[1]
+        console.log("nivel: ", nivel, typeof(nivel))
+        if(typeof(nivel) == 'string'){
+            score = nivel.split("-")
+            scoreFinal = score[1]
+            console.log("score: ", score[1])
+        }
+
+        console.log(scoreFinal)
+    }
+    split()
+
+
     return (
         <div className={styles.container}>
             <Head>
@@ -16,7 +46,7 @@ function Resultado(){
 
             <main>
                 <div className={styles.centralizeCont}>
-                    <h1>Resultados: </h1>
+                    <h1>Resultado: {scoreFinal}/30</h1>
                 </div>
             </main>
         </div>

@@ -8,6 +8,7 @@ import { loadDefaultErrorComponents } from 'next/dist/server/load-components'
 
 import { useNavigate } from "react-router-dom";
 import { Router, useRouter } from 'next/router'
+import { stringify } from 'querystring'
 
 export default function Home() {
 
@@ -17,6 +18,8 @@ export default function Home() {
   const router = useRouter()
 
   let nivel = ''
+
+  let query = ''
 
   let temp = new Array<any>
 
@@ -71,7 +74,7 @@ export default function Home() {
     //router.push('/resultado')
     router.push({
       pathname: '/resultado',
-      query: { place: 'City' }
+      query: { nivel: nivel.concat('-', score.toString()) }
     });
   //  navigate('/Resultado', {state: score})
   }
