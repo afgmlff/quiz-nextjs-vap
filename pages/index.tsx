@@ -14,8 +14,18 @@ export default function Home() {
 
   const {register, handleSubmit, reset, formState:{errors}} = useForm()
 
+  const [fnome, setNome] = useState('');
+  const [femail, setEmail] = useState('');
+
   //const navigate = useNavigate();
   const router = useRouter()
+  let score = 0
+
+  let struct = {
+    fnome,
+    femail,
+    score,
+  }
 
   let nivel = ''
 
@@ -25,7 +35,7 @@ export default function Home() {
 
   const gabarito: any[] = ['b', 'c', 'a', 'c', 'c', 'c', 'b', 'a', 'a', 'a', 'c', 'c', 'b', 'a', 'b', 'b', 'c', 'a', 'a', 'b', 'a', 'b', 'd', 'b', 'b', 'c', 'a', 'c', 'a', 'a']
 
-  let score = 0
+  
   
   function checkScore(){
     for(let i=0; i<30; i++){
@@ -33,6 +43,9 @@ export default function Home() {
         score = score + 1
     }
     console.log("score: " + score)
+    struct.score = score
+    console.log("Struct: " + struct.fnome + struct.femail + struct.score)
+
 
     if(score == 30){
       nivel = 'C2'
@@ -66,6 +79,7 @@ export default function Home() {
 
   async function verifSubmit (data: any){
     console.log(data)
+
     for (var i=0; i<30; i++){
       console.log(temp[i])
     }
@@ -80,7 +94,7 @@ export default function Home() {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(struct)
     })
 
     const content = await response.json();
@@ -110,13 +124,13 @@ export default function Home() {
             <p className={styles.question}><span className={styles.mandatory}>* </span>Nome: </p>
             <div className={styles.answer}>
               {/* <input type="text" {...register('nome',{required: 'Digite seu nome'})}></input>   */} {/* required antigo, troquei por 'required' no input*/}
-              <input type="text" required {...register('nome',{required: ''})}></input>
+              <input value={fnome}  type="text" required {...register('nome',{required: ''})} onChange={e => setNome(e.target.value)}></input>
               {/*{errors.nome && <p className={styles.errorMsg}>Campo obrigatório</p>}*/} {/** error pro required antigo */}
             </div>
             
             <p className={styles.question}><span className={styles.mandatory}>* </span>E-mail: </p>
             <div className={styles.answer}>
-            <input type="text" required {...register('email',{required: ''})}></input>
+            <input type="text" value={femail} required {...register('email',{required: ''})} onChange={e => setEmail(e.target.value)}></input>
             </div>
             <br/>
             <br/>

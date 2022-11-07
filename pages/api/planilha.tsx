@@ -2,15 +2,15 @@ import {google} from 'googleapis'
 import { NextApiRequest, NextApiResponse } from 'next';
 
 type Formulario = {
-    nome: string,
-    email: string
+    fnome: string,
+    femail: string,
+    score: any,
 }
 
 async function handler(req: NextApiRequest,res: NextApiResponse){
     
-    if(req.method === 'POST'){
-        const {dados, respostas, nota, nivel} = req.body
-        console.log("teste: " + {dados, respostas, nota, nivel})
+    if(req.method !== 'POST'){
+        console.log("Something went wrong. Only POST methods.")
     }
 
 
@@ -39,11 +39,11 @@ async function handler(req: NextApiRequest,res: NextApiResponse){
 
         const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
-            range: 'A1:B1',
+            range: 'A1:C1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
                 values: [
-                    [body.nome, body.email]
+                    [body.fnome, body.femail, body.score]
                 ]
             }
         })
