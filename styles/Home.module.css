@@ -115,16 +115,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-
-}
 
 .roundedImg{
   border-radius: 50%;
@@ -167,4 +157,12 @@
 
 .mandatory{
   color: red;
+}
+
+.itemContainer{
+  background-color: #fafafa;
+}
+
+.pageTitle{
+  color: white
 }
