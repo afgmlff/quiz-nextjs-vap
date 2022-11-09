@@ -161,12 +161,17 @@
 
 .itemContainer{
   background-color: #fafafa;
-  border-radius: 15px;
+  border-radius: 30px;
   margin-top: 10px;
   padding: 5px 25px 25px 25px;
+  margin-bottom: 20px;
 }
 
 .pageTitle{
   color: white
 }
 
+.submitBut{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}

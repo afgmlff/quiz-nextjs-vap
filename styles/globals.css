@@ -64,6 +64,7 @@ hr{
     transform: scale(0);
     transition: 150ms transform ease-in-out;
 
+    /* alterar pós container */
     background-color: CanvasText;
   }
   
@@ -74,4 +75,8 @@ hr{
   input[type="radio"]:focus {
     outline: max(2px, 0.15em) solid currentColor;
     outline-offset: max(2px, 0.15em);
+  }
+
+  button{
+    background-color: ;
   }

@@ -130,12 +130,13 @@ export default function Home() {
               </div>
             </div>
             
+          <div className={styles.itemContainer}>
             <p className={styles.question}><span className={styles.mandatory}>* </span>E-mail: </p>
             <div className={styles.answer}>
             <input type="text" value={femail} required {...register('email',{required: ''})} onChange={e => setEmail(e.target.value)}></input>
             </div>
-            <br/>
-            <br/>
+          </div>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>1. Eu _____ brasileiro.</p>
             <div className={styles.answer}>
               <input type="radio" id="0" defaultChecked={false} required name="answer1" value="a" onChange={onChange}></input>
@@ -151,9 +152,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>2. Ele _____ 24 anos.</p>
             <div className={styles.answer}>
               <input type="radio" id="1" defaultChecked={false} required name="answer2" value="a" onChange={onChange}></input>
@@ -169,9 +170,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>3. Nós _____ com fome.</p>
             <div className={styles.answer}>
               <input type="radio" id="2" defaultChecked={false} required name="answer3" value="a" onChange={onChange}></input>
@@ -187,9 +188,10 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+
+          <div className={styles.itemContainer}>
             <p className={styles.question}>4. ____ pai e ____ mãe de João moram no Rio de Janeiro.</p>
             <div className={styles.answer}>
               <input type="radio" id="3" defaultChecked={false} required name="answer4" value="a" onChange={onChange}></input>
@@ -205,9 +207,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
             
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>5. Eles ____ futebol.</p>
             <div className={styles.answer}>
               <input type="radio" id="4" defaultChecked={false} required name="answer5" value="a" onChange={onChange}></input>
@@ -223,9 +225,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>6. _____ é o presidente do Brasil?</p>
             <div className={styles.answer}>
               <input type="radio" id="5" defaultChecked={false} required name="answer6" value="a" onChange={onChange}></input>
@@ -241,9 +243,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>7. Onde está _____ livro?</p>
             <div className={styles.answer}>
               <input type="radio" id="6" defaultChecked={false} required name="answer7" value="a" onChange={onChange}></input>
@@ -259,9 +261,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>8. Eu _____ para a escola todos os dias.</p>
             <div className={styles.answer}>
               <input type="radio" id="7" defaultChecked={false} required name="answer8" value="a" onChange={onChange}></input>
@@ -277,9 +279,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>9. Eu estou _____ português.</p>
             <div className={styles.answer}>
               <input type="radio" id="8" defaultChecked={false} required name="answer9" value="a" onChange={onChange}></input>
@@ -295,10 +297,10 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>10. Ela _____ ontem.</p>
             <div className={styles.answer}>
               <input type="radio" id="9" defaultChecked={false} required name="answer10" value="a" onChange={onChange}></input>
@@ -314,9 +316,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>11. Eu _____ suco de caju todos os dias quando eu _____ criança.</p>
             <div className={styles.answer}>
               <input type="radio" id="10" defaultChecked={false} required name="answer11" value="a" onChange={onChange}></input>
@@ -332,9 +334,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>12. Como se escreve o número 123?</p>
             <div className={styles.answer}>
               <input type="radio" id="11" defaultChecked={false} required name="answer12" value="a" onChange={onChange}></input>
@@ -350,9 +352,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>13. Eu _____ para o Brasil na próxima semana.</p>
             <div className={styles.answer}>
               <input type="radio" id="12" defaultChecked={false} required name="answer13" value="a" onChange={onChange}></input>
@@ -368,9 +370,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>14. Eles ______ amanhã às 14h.</p>
             <div className={styles.answer}>
               <input type="radio" id="13" defaultChecked={false} required name="answer14" value="a" onChange={onChange}></input>
@@ -386,9 +388,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>15. Morei _____ Brasil _____ 2 anos.</p>
             <div className={styles.answer}>
               <input type="radio" id="14" defaultChecked={false} required name="answer15" value="a" onChange={onChange}></input>
@@ -404,9 +406,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>16. Eu gosto de viajar _____ avião.</p>
             <div className={styles.answer}>
               <input type="radio" id="15" defaultChecked={false} required name="answer16" value="a" onChange={onChange}></input>
@@ -422,9 +424,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>17. O banco _____.</p>
             <div className={styles.answer}>
               <input type="radio" id="16" defaultChecked={false} required name="answer17" value="a" onChange={onChange}></input>
@@ -440,9 +442,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>18. Eu sou _____ que meu irmão.</p>
             <div className={styles.answer}>
               <input type="radio" id="17" defaultChecked={false} required name="answer18" value="a" onChange={onChange}></input>
@@ -458,9 +460,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>19. _____ um mosquito dentro do quarto.</p>
             <div className={styles.answer}>
               <input type="radio" id="18" defaultChecked={false} required name="answer19" value="a" onChange={onChange}></input>
@@ -476,9 +478,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>20. Ele me disse _____ que ele sabe.</p>
             <div className={styles.answer}>
               <input type="radio" id="19" defaultChecked={false} required name="answer20" value="a" onChange={onChange}></input>
@@ -494,9 +496,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>21. Ele comprou um sanduíche para _____.</p>
             <div className={styles.answer}>
               <input type="radio" id="20" defaultChecked={false} required name="answer21" value="a" onChange={onChange}></input>
@@ -512,9 +514,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>22. Eu _____ de uma água, por favor.</p>
             <div className={styles.answer}>
               <input type="radio" id="21" defaultChecked={false} required name="answer22" value="a" onChange={onChange}></input>
@@ -530,9 +532,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>23. _____ você quer aprender português?</p>
             <div className={styles.answer}>
               <input type="radio" id="22" defaultChecked={false} required name="answer23" value="a" onChange={onChange}></input>
@@ -551,9 +553,9 @@ export default function Home() {
               <label> e) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>24. Ele sairia de casa quando ______ de chover.</p>
             <div className={styles.answer}>
               <input type="radio" id="23" defaultChecked={false} required name="answer24" value="a" onChange={onChange}></input>
@@ -569,9 +571,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>25. Espero que você _____.</p>
             <div className={styles.answer}>
               <input type="radio" id="24" defaultChecked={false} required name="answer25" value="a" onChange={onChange}></input>
@@ -587,9 +589,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>26. Se eu _____ uma festa, eu te convido.</p>
             <div className={styles.answer}>
               <input type="radio" id="25" defaultChecked={false} required name="answer26" value="a" onChange={onChange}></input>
@@ -605,9 +607,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>27. Eu _____ muito ultimamente.</p>
             <div className={styles.answer}>
               <input type="radio" id="26" defaultChecked={false} required name="answer27" value="a" onChange={onChange}></input>
@@ -623,9 +625,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>28. Eu já _____ quando ele chegou.</p>
             <div className={styles.answer}>
               <input type="radio" id="27" defaultChecked={false} required name="answer28" value="a" onChange={onChange}></input>
@@ -641,9 +643,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>29. _____ alto ____ frio.</p>
             <div className={styles.answer}>
               <input type="radio" id="28" defaultChecked={false} required name="answer29" value="a" onChange={onChange}></input>
@@ -659,9 +661,9 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
-            <br/>
-            <br/>
+          <div className={styles.itemContainer}>
             <p className={styles.question}>30. Eu moro em São Paulo _____ 10 anos.</p>
             <div className={styles.answer}>
               <input type="radio" id="29" defaultChecked={false} required name="answer30" value="a" onChange={onChange}></input>
@@ -677,6 +679,7 @@ export default function Home() {
               <label> d) Não sei</label>
               <br/>
             </div>
+          </div>
 
           </div>
           <div className={styles.submitBut}>
