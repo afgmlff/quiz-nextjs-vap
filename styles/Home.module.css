@@ -161,8 +161,12 @@
 
 .itemContainer{
   background-color: #fafafa;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 5px 25px 25px 25px;
 }
 
 .pageTitle{
   color: white
 }
+
