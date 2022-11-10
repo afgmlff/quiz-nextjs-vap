@@ -683,7 +683,7 @@ export default function Home() {
 
           </div>
           <div className={styles.submitBut}>
-            <button>Enviar questionário</button>
+            <button>Enviar</button>
           </div>
         </form>
         </div>

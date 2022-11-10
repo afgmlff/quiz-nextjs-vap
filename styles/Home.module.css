@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
 .container {
   padding: 0 2rem;
 }
@@ -19,13 +22,14 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  color: #eaeaea;
 }
 
 .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  flex-grow: 0.03;
 }
 
 .title a {
@@ -143,11 +147,14 @@
 
 .question{
   text-align: left;
-
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 
 .answer{
   text-align: left;
+  font-family: 'Poppins', sans-serif;
+  line-height: 200%;
 }
 
 .errorMsg{
@@ -160,18 +167,51 @@
 }
 
 .itemContainer{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   background-color: #fafafa;
   border-radius: 30px;
   margin-top: 10px;
   padding: 5px 25px 25px 25px;
   margin-bottom: 20px;
+
+  /* duas cores*/
+  position: relative;
+  z-index: 9;
+}
+
+
+/* segunda cor (apagar se nao quiser duas cores) */
+.itemContainer:before {
+  border-radius: 30px;
+  width: 40%;
+  height: 90%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  right: 0%;
+  bottom: 0%;
+  left: 60%;
+  background: rgb(0, 0, 0);
+  opacity: 20%;
+
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+
+  
 }
 
 .pageTitle{
-  color: white
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .submitBut{
   margin-top: 50px;
   margin-bottom: 30px;
 }
+
+

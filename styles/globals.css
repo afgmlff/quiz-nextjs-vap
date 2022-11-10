@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 html{
     padding: 0;
     margin: 0;
@@ -32,7 +34,9 @@ hr{
 
   input[type="text"], textarea {
 
-    background-color : #d1d1d1; 
+    background-color : #d1d1d1;
+    color: black; 
+    border-radius: 7px;
   
   }
 
@@ -65,7 +69,7 @@ hr{
     transition: 150ms transform ease-in-out;
 
     /* alterar pós container */
-    background-color: CanvasText;
+    background-color: black;
   }
   
   input[type="radio"]:checked::before {
@@ -78,5 +82,13 @@ hr{
   }
 
   button{
-    background-color: ;
+    height: 40px;
+    width: 80px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(34, 146, 34, 0.828);
+    border-radius: 10px;
+  }
+
+  button:hover{
+    background-color: rgba(34, 146, 34, 0.14);
   }
