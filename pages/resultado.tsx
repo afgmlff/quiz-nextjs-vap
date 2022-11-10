@@ -39,7 +39,7 @@ function Resultado(){
 
     }
 
-    function showDivResult(){// percebe qual div deveremos exibir de acordo com o resultado do usuário  
+    function ShowDivResult(){// percebe qual div deveremos exibir de acordo com o resultado do usuário  
 
         //console.log(numbScoreFinal)
         var elemID
@@ -89,7 +89,7 @@ function Resultado(){
 
 
     split()
-    showDivResult()
+    ShowDivResult()
 
 
     return (

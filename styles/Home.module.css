@@ -189,18 +189,13 @@
   position: absolute;
   z-index: -1;
   top: 5%;
-  right: 0%;
+  right: 5%;
   bottom: 0%;
-  left: 60%;
-  background: rgb(0, 0, 0);
+  left: 70%;
   opacity: 20%;
-
-  -webkit-transform: skewY(5deg);
-  -moz-transform: skewY(5deg);
-  -ms-transform: skewY(5deg);
-  -o-transform: skewY(5deg);
-  transform: skewY(5deg);
-
+  background-image: url("/cropped-4-2.png");
+  background-size: 111px 100px;
+  background-repeat: no-repeat;
   
 }
 
@@ -213,5 +208,4 @@
   margin-top: 50px;
   margin-bottom: 30px;
 }
-
 
