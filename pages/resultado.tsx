@@ -21,7 +21,7 @@ function Resultado(){
     let scoreFinal = ''
     let nivelFinal = ''
 
-    function split (){
+    function split (){//aloca os parametros passados na url (query) nas respectivas variáveis
 
         let params = query.split("=", 2)
 //        console.log(params[1])
@@ -102,8 +102,9 @@ function Resultado(){
 
             <main>
                 <div className={styles.centralizeCont}>
-                    <h1>Resultado: {scoreFinal}/30</h1>
+                    <h1 className={styles.pageTitle}>Resultado: {scoreFinal}/30</h1>
                 </div>
+                <hr></hr>
                  <div id = "A1" className={styles.resultContainer}>
                     Seu nível é A1: Básico <br/><br/>
 
